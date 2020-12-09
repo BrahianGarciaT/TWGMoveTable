@@ -41,9 +41,13 @@ export class AppComponent implements OnInit {
     if (language === 'es') {
       this.config = ES_CONFIG;
       this.dataSource = new MatTableDataSource(this.config.moves);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     } else if (language === 'en') {
       this.config = EN_CONFIG;
       this.dataSource = new MatTableDataSource(this.config.moves);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     }
   }
 
