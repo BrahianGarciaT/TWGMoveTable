@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
   language: string;
 
-  config = EN_CONFIG;
+  config = ES_CONFIG;
 
   constructor() {
     this.dataSource = new MatTableDataSource(this.config.moves);
@@ -40,8 +40,10 @@ export class AppComponent implements OnInit {
   setLanguage(language: string): void {
     if (language === 'es') {
       this.config = ES_CONFIG;
+      this.dataSource = new MatTableDataSource(this.config.moves);
     } else if (language === 'en') {
       this.config = EN_CONFIG;
+      this.dataSource = new MatTableDataSource(this.config.moves);
     }
   }
 
