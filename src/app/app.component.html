@@ -12,14 +12,6 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div class="row">
-        <button mat-raised-button class="bg-dark text-white" style="margin-top: 20px;">
-          Añadir desarrollador
-          <mat-icon>
-            add
-          </mat-icon>
-        </button>
-      </div>
       <mat-form-field>
         <mat-label>{{config.filterPlaceHolder}}</mat-label>
         <input matInput (keyup)="applyFilter($event)">
